@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="malvernmadondo.pizzaorder.MainActivity">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dp"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:text="Small ($7.00)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/textView"
+        android:id="@+id/rbSmall" />
+
+    <RadioButton
+        android:text="Medium ($9.00)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbMedium"
+        android:layout_below="@+id/rbSmall"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extras"
+        android:layout_marginTop="14dp"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_below="@+id/rbLarge"
+        android:layout_toEndOf="@+id/radioGroup" />
+
+    <RadioButton
+        android:text="Large ($13.00)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbLarge"
+        android:layout_below="@+id/rbMedium"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Extra Cheese (add $1.75)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkBxCheese"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="126dp" />
+
+    <CheckBox
+        android:text="Delivery (add $2.50)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chkBxCheese"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:id="@+id/chkBxDelivery" />
+
+    <TextView
+        android:text="Total is $"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/textViewTotal"
+        android:layout_below="@+id/btnCalculate"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:textStyle="normal|bold"
+        android:textSize="14sp" />
+
+    <Button
+        android:text="Calculate Total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCalculate"
+        android:layout_below="@+id/chkBxDelivery"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
